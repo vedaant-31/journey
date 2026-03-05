@@ -1,65 +1,19 @@
-let arr= [
-    {
-    team:"MI",
-    primary:"blue",
-    secondary:"golden"
-    },
-    {
-    team:"CSK",
-    primary:"yellow",
-    secondary:"blue"
-    },
-    {
-    team:"RCB",
-    primary:"red",
-    secondary:"black"
-    },
-    {
-    team:"KKR",
-    primary:"purple",
-    secondary:"golden"
-    },
-    {
-    team:"DC",
-    primary:"blue",
-    secondary:"red"
-    },
-    {
-    team:"SRH",
-    primary:"orange",
-    secondary:"black"
-    },
-    {
-    team:"PBKS",
-    primary:"red",
-    secondary:"white"
-    },
-    {
-    team:"RR",
-    primary:"red",
-    secondary:"blue"
-    },
-    {
-    team:"GT",
-    primary:"green",
-    secondary:"blue"
-    },
-    {
-    team:"LSG",
-    primary:"orange",
-    secondary:"brown"
-    }
-]
-
-var btn = document.querySelector("button");
-var div = document.querySelector("div");
 var main = document.querySelector("main");
-// var main = document.querySelector("#");
+var btn = document.querySelector("button");
 
-btn.addEventListener("click",function(){
-    var winner= Math.floor(Math.random()*arr.length)
-    div.innerHTML = (arr[winner].team)
-    // console.log(`${arr[winner].secondary}`)
-    main.style.backgroundColor=`${arr[winner].secondary}`
-    div.style.backgroundColor=`${arr[winner].primary}`
+btn.addEventListener("click", function(){
+    var div = document.createElement("div");
+    main.appendChild(div)
+    var c1= Math.floor(Math.random()*256);
+    var c2= Math.floor(Math.random()*256);
+    var c3= Math.floor(Math.random()*256);
+    var rotation = Math.floor(Math.random()*180);
+    var x = Math.floor(Math.random()*90);
+    var y = Math.floor(Math.random()*90);
+    
+    
+    div.style.rotate = rotation+"deg"
+    div.style.backgroundColor=`rgb(${c1},${c2},${c3})`
+    div.style.left= x+'%'
+    div.style.top= y+'%'
 })

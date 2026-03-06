@@ -1,19 +1,21 @@
-var main = document.querySelector("main");
 var btn = document.querySelector("button");
+var h2 = document.querySelector("h2");
+var inner = document.querySelector(".inner");
+var bottom = document.querySelector("bottom");
+var grow= 0;
+var time= Math.floor(Math.random()*30)+50
 
 btn.addEventListener("click", function(){
-    var div = document.createElement("div");
-    main.appendChild(div)
-    var c1= Math.floor(Math.random()*256);
-    var c2= Math.floor(Math.random()*256);
-    var c3= Math.floor(Math.random()*256);
-    var rotation = Math.floor(Math.random()*180);
-    var x = Math.floor(Math.random()*90);
-    var y = Math.floor(Math.random()*90);
-    
-    
-    div.style.rotate = rotation+"deg"
-    div.style.backgroundColor=`rgb(${c1},${c2},${c3})`
-    div.style.left= x+'%'
-    div.style.top= y+'%'
+    var bar = setInterval(() => {
+        grow++
+        h2.innerHTML=grow+'%'
+        inner.style.width=grow+'%'
+        btn.style.pointerEvents='none'
+        btn.style.opacity='70%'
+    }, time);
+    setTimeout(() => {
+        clearInterval(bar)
+        var para = document.createElement("p");
+    }, time*100);
+    console.log(time)
 })

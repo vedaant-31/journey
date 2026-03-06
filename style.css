@@ -8,32 +8,59 @@
 html, body{
     height: 100%;
     width: 100%;
-    overflow: hidden;
-}
-main{
-    height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.main{
+    height: 250px;
+    width: 500px;
+    background-color: rgb(141, 141, 141);
+    border-radius: 20px;
+
+}
+.top{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 50px 0 20px 0;
+}
+.outer{
+    height: 20px;
+    width: 90%;
+    border-radius: 20px;
+    background-color: rgb(220, 220, 220);
+    margin: 20px 10px;
+}
+.inner{
+    height: 100%;
+    width: 0;
+    border-radius: 20px;
+    background-color: yellowgreen;
 }
 button{
-    height: 60px;
-    width: 200px;
-    background-color:aqua;
+    height: 50px;
+    width: 150px;
+    background-color:yellowgreen;
     border-radius: 50px;
     color: black;
-    border-color: red;
     cursor: pointer;
-    position: absolute;
-    z-index: 99;
+    font-weight: 500;
 }
 button:active{
     scale: 0.95;
 }
-div{
-    height: 200px;
-    width: 200px;
-    position: absolute;
+.bottom{
+    display: flex;
+    justify-content:space-around ;
+    align-items: center;
+}
+h2{
+    font-size: 55px;
+    font-weight: 450;
+}
+p{
+    font-size: 18px;
 }

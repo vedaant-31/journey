@@ -8,59 +8,32 @@
 html, body{
     height: 100%;
     width: 100%;
-    background-color: black;
+    background-color: black; 
     display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.main{
-    height: 250px;
-    width: 500px;
-    background-color: rgb(141, 141, 141);
-    border-radius: 20px;
-
-}
-.top{
-    display: flex;
-    align-items: center;
+    align-items:end;
     justify-content: center;
     flex-direction: column;
-    margin: 50px 0 20px 0;
 }
-.outer{
-    height: 20px;
+
+.keys{
+    height: 40%;
     width: 90%;
-    border-radius: 20px;
-    background-color: rgb(220, 220, 220);
-    margin: 20px 10px;
-}
-.inner{
-    height: 100%;
-    width: 0;
-    border-radius: 20px;
-    background-color: yellowgreen;
-}
-button{
-    height: 50px;
-    width: 150px;
-    background-color:yellowgreen;
-    border-radius: 50px;
-    color: black;
-    cursor: pointer;
-    font-weight: 500;
-}
-button:active{
-    scale: 0.95;
-}
-.bottom{
+    background-color: #333;
     display: flex;
-    justify-content:space-around ;
+    justify-content: space-around;
+    gap:20px;
+    margin: 5% 0;
+}
+.keys p{
+    width: 50px;
+    height: 200px;
+    background-color: #fff;
+    color: black;
+    /* text-align: center; */
+    display: flex;
+    justify-content: center;
     align-items: center;
 }
-h2{
-    font-size: 55px;
-    font-weight: 450;
-}
-p{
-    font-size: 18px;
+p:active{
+    background-color: blue;
 }
